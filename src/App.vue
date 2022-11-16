@@ -19,5 +19,9 @@
   .app {
     display: grid;
     grid-template-columns: 8fr 4fr;
+  
+  }
+  Chat {
+    grid-column: 2;
   }
 </style>
