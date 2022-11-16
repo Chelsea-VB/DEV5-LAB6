@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, reactive, ref } from 'vue';
 let comment = reactive({ comment: []});
+let commentData = ref('');
 
 onMounted(() => {
   const api_url = "https://lab5-p379.onrender.com/api/v1/messages/";
@@ -15,7 +16,8 @@ onMounted(() => {
 });
 
 const newComment = () => {
-    console.log("test");
+    console.log(commentData.value);
+
 }
 
 </script>
@@ -25,7 +27,7 @@ const newComment = () => {
         <div class="comments__header">
           <h3>Comments</h3>
           <div class="comment">
-            <input type="text">
+            <input type="text" v-model="commentData" placeholder="Comment here">
             <button @click="newComment">send</button>
             <ul class="comment_list">
               <li v-for="comment in comment.comment" :key="comment.id" >
