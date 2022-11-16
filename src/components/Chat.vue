@@ -21,7 +21,7 @@ onMounted(() => {
         <div class="comments__header">
           <h3>Comments</h3>
           <div class="comment">
-            <ul>
+            <ul class="comment_list">
               <li v-for="comment in comment.comment" :key="comment.id" >
                 <h4>{{comment.user}}</h4>
                 <p>{{comment.text}}</p>
@@ -33,5 +33,11 @@ onMounted(() => {
   </template>
 
 <style scoped>
+
+.comment_list {
+    display: flex;
+    flex-direction: column-reverse;
+    list-style: none;
+}
 
 </style>
