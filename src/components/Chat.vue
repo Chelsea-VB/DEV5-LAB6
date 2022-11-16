@@ -10,6 +10,7 @@ onMounted(() => {
         console.log(data);
         comment.comment = data;
 
+
     });
 });
 
@@ -21,7 +22,7 @@ onMounted(() => {
           <h3>Comments</h3>
           <div class="comment">
             <ul>
-              <li>
+              <li v-for="comment in comment.comment" :key="comment.id">
                 <h4>Username</h4>
                 <p>Comment</p>
               </li>
