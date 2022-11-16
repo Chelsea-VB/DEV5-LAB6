@@ -17,6 +17,19 @@ onMounted(() => {
 
 const newComment = () => {
     console.log(commentData.value);
+    let data = {
+        user: "Chelsea",
+        text: commentData.value
+    }
+    
+    const api_url = "https://lab5-p379.onrender.com/api/v1/messages/";
+    fetch(api_url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify (data)
+    })
 
 }
 
