@@ -14,6 +14,10 @@ onMounted(() => {
     });
 });
 
+const newComment = () => {
+    console.log("test");
+}
+
 </script>
 
 <template>
