@@ -22,9 +22,9 @@ onMounted(() => {
           <h3>Comments</h3>
           <div class="comment">
             <ul>
-              <li v-for="comment in comment.comment" :key="comment.id">
-                <h4>Username</h4>
-                <p>Comment</p>
+              <li v-for="comment in comment.comment" :key="comment.id" >
+                <h4>{{comment.user}}</h4>
+                <p>{{comment.text}}</p>
               </li>
             </ul>
           </div>
