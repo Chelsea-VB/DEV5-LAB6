@@ -10,8 +10,10 @@
 <template>
   <div class="app">
     <VideoPlayer />
+    <div class="details">
     <VideoDetails />
     <Chat />
+    </div>
   </div>
 </template>
 
@@ -21,7 +23,7 @@
     grid-template-columns: 8fr 4fr;
   
   }
-  Chat {
+  .details {
     grid-column: 2;
   }
 </style>
